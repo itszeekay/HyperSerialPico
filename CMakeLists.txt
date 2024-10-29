@@ -7,6 +7,7 @@ if (NOT PICO_PROGRAM_MAIN_ENTRY)
 	set(BOOT_WORKAROUND OFF)
 
 	# Default output data pin for the non-SPI LED strips (only for sk6812/ws2812b)
+ 	# GPIO 16 is NEOPIXEL 0 
 	set(OUTPUT_DATA_PIN 16)
 
 	# Default output data/clocks pin for the SPI LED strips (only for apa102, not for sk6812/ws2812b)
@@ -16,7 +17,7 @@ if (NOT PICO_PROGRAM_MAIN_ENTRY)
 	set(OUTPUT_SPI_INTERFACE spi0)
 
 	# Use multi-segment, starting index of second led strip or OFF to disable
-	set(SECOND_SEGMENT_INDEX OFF)
+	set(SECOND_SEGMENT_INDEX 226)
 
 	# If multi-segment is used and it's reversed, set this option to ON to enable reversing
 	set(SECOND_SEGMENT_REVERSED OFF)
